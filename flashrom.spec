@@ -11,7 +11,6 @@ Source0: %{name}-%{svnversion}.tar.gz
 License: GPL
 Group: System/Kernel and hardware
 Url: http://linuxbios.org/Flashrom
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: pciutils-devel, zlib-devel, glibc-static-devel
 
 %description
