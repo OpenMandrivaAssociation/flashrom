@@ -1,7 +1,7 @@
 %define name flashrom
 %define svnversion 20071017
 %define version 0.%{svnversion} 
-%define release %mkrel 1
+%define release %mkrel 3
 
 Summary: Utility which can be used to detect/read/write BIOS chips 
 Name: %{name}
