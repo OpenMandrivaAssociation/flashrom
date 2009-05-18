@@ -4,10 +4,11 @@
 
 Summary: Utility which can be used to detect/read/write BIOS chips 
 Name: %{name}
+Epoch: 1
 Version: %{version}
 Release: %{release}
 Source0: %{name}-%{version}.tar.gz
-License: GPL
+License: GPLv2+
 Group: System/Kernel and hardware
 Url: http://coreboot.org/flashrom
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
