@@ -7,7 +7,7 @@ Name: %{name}
 Epoch: 1
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}.tar.gz
+Source0: http://qa.coreboot.org/releases/%{name}-%{version}.tar.gz
 License: GPLv2+
 Group: System/Kernel and hardware
 Url: http://coreboot.org/flashrom
