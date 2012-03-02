@@ -1,8 +1,8 @@
 Summary:	Utility which can be used to detect/read/write BIOS chips 
 Name:		flashrom
 Epoch:		1
-Version:	0.9.5
-Release:	%mkrel 1
+Version:	0.9.5.1
+Release:	1
 Source0:	http://qa.coreboot.org/releases/%{name}-%{version}.tar.bz2
 License:	GPLv2+
 Group:		System/Kernel and hardware
@@ -26,4 +26,3 @@ mkdir -p %buildroot/%{_sbindir}
 %files
 %{_sbindir}/flashrom
 %{_mandir}/man8/flashrom*
-
