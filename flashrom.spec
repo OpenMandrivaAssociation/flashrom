@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Summary:	Utility which can be used to detect/read/write BIOS chips 
 Name:		flashrom
 Epoch:		1
