@@ -8,8 +8,10 @@ Release:	1
 Source0:	http://download.flashrom.org/releases/%{name}-%{version}.tar.bz2
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://coreboot.org/flashrom
-BuildRequires:	pciutils-devel, zlib-devel, glibc-static-devel
+Url:		http://flashrom.org
+BuildRequires:	pciutils-devel
+BuildRequires:	zlib-devel
+BuildRequires:	glibc-static-devel
 
 %description
 Flashrom is a utility which can be used to detect BIOS chips (DIP, PLCC),
