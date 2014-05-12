@@ -1,6 +1,7 @@
 %define debug_package %{nil}
 
 Summary:	Utility which can be used to detect/read/write BIOS chips 
+
 Name:		flashrom
 Epoch:		1
 Version:	0.9.7
@@ -24,8 +25,8 @@ read their contents and write new contents on the chips ("flash the chip").
 %make
 
 %install
-mkdir -p %buildroot/%{_sbindir}
-%makeinstall PREFIX=%buildroot/usr
+mkdir -p %{buildroot}/%{_sbindir}
+%makeinstall PREFIX=%{buildroot}/usr
 
 %files
 %{_sbindir}/flashrom
