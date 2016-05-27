@@ -10,6 +10,7 @@ License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://flashrom.org
 BuildRequires:	pkgconfig(libusb-1.0)
+BuildRequires:	pkgconfig(libusb)
 BuildRequires:	pciutils-devel
 BuildRequires:	zlib-devel
 BuildRequires:	glibc-static-devel
