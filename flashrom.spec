@@ -9,6 +9,7 @@ Source0:	http://download.flashrom.org/releases/%{name}-%{version}.tar.bz2
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://flashrom.org
+BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pciutils-devel
 BuildRequires:	zlib-devel
 BuildRequires:	glibc-static-devel
