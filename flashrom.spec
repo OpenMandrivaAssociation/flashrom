@@ -3,9 +3,9 @@
 Summary:	Utility which can be used to detect/read/write BIOS chips
 Name:		flashrom
 Epoch:		1
-Version:	0.9.9
+Version:	1.1
 Release:	1
-Source0:	http://download.flashrom.org/releases/%{name}-%{version}.tar.bz2
+Source0:	http://download.flashrom.org/releases/%{name}-v%{version}.tar.bz2
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://flashrom.org
@@ -23,11 +23,11 @@ read their contents and write new contents on the chips ("flash the chip").
 %setup -q
 
 %build
-%make
+%make_build
 
 %install
 mkdir -p %{buildroot}/%{_sbindir}
-%makeinstall PREFIX=%{buildroot}/usr
+%make_install PREFIX=%{buildroot}/usr
 
 %files
 %{_sbindir}/flashrom
