@@ -30,5 +30,5 @@ read their contents and write new contents on the chips ("flash the chip").
 %make_install DESTDIR=%{buildroot} PREFIX=%{_prefix}
 
 %files
-#{_sbindir}/*
-#{_mandir}/man8/*
+%{_sbindir}/*
+%{_mandir}/man8/*
