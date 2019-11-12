@@ -20,7 +20,7 @@ Flashrom is a utility which can be used to detect BIOS chips (DIP, PLCC),
 read their contents and write new contents on the chips ("flash the chip").
 
 %prep
-%setup -q
+%setup -q -n %{name}-v%{version}
 
 %build
 %make_build
