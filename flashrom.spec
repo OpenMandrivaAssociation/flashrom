@@ -30,5 +30,5 @@ install -dm755 %buildroot%_sbindir
 %make_install PREFIX=%buildroot%_prefix install
 
 %files
-%{_sbindir}/*
-%{_mandir}/man8/*
+#{_sbindir}/*
+#{_mandir}/man8/*
