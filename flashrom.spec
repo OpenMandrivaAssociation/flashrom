@@ -26,8 +26,8 @@ read their contents and write new contents on the chips ("flash the chip").
 %make_build CFLAGS="%optflags" PREFIX=%_prefix 
 
 %install
-install -dm755 %buildroot%_sbindir
-%make_install PREFIX=%buildroot%_prefix install
+#install -dm755 %buildroot%_sbindir
+%make_install DESTDIR=%{buildroot} PREFIX=%{_prefix}
 
 %files
 #{_sbindir}/*
