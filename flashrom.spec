@@ -3,9 +3,9 @@
 Summary:	Utility which can be used to detect/read/write BIOS chips
 Name:		flashrom
 Epoch:		1
-Version:	0.9.9
+Version:	1.1
 Release:	1
-Source0:	http://download.flashrom.org/releases/%{name}-%{version}.tar.bz2
+Source0:	http://download.flashrom.org/releases/%{name}-v%{version}.tar.bz2
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://flashrom.org
@@ -20,15 +20,15 @@ Flashrom is a utility which can be used to detect BIOS chips (DIP, PLCC),
 read their contents and write new contents on the chips ("flash the chip").
 
 %prep
-%setup -q
+%setup -q -n %{name}-v%{version}
 
 %build
-%make
+%make_build CFLAGS="%optflags" PREFIX=%_prefix 
 
 %install
-mkdir -p %{buildroot}/%{_sbindir}
-%makeinstall PREFIX=%{buildroot}/usr
+#install -dm755 %buildroot%_sbindir
+%make_install DESTDIR=%{buildroot} PREFIX=%{_prefix}
 
 %files
-%{_sbindir}/flashrom
-%{_mandir}/man8/flashrom*
+%{_sbindir}/*
+%{_mandir}/man8/*
