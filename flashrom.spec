@@ -30,5 +30,5 @@ mkdir -p %{buildroot}/%{_sbindir}
 %make_install PREFIX=%{buildroot}/usr
 
 %files
-%{_sbindir}/flashrom
-%{_mandir}/man8/flashrom*
+#{_sbindir}/flashrom
+#{_mandir}/man8/flashrom*
