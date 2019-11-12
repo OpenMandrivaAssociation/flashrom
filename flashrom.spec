@@ -23,12 +23,12 @@ read their contents and write new contents on the chips ("flash the chip").
 %setup -q -n %{name}-v%{version}
 
 %build
-%make_build
+%make_build CFLAGS="%optflags" PREFIX=%_prefix 
 
 %install
-mkdir -p %{buildroot}/%{_sbindir}
-%make_install PREFIX=%{buildroot}/usr
+install -dm755 %buildroot%_sbindir
+%make_install PREFIX=%buildroot%_prefix install
 
 %files
-#{_sbindir}/flashrom
-#{_mandir}/man8/flashrom*
+%{_sbindir}/*
+%{_mandir}/man8/*
