@@ -42,17 +42,12 @@ sed -e 's/MODE="[0-9]*", GROUP="plugdev"/TAG+="uaccess"/g' util/flashrom_udev.ru
 
 %build
 %meson \
-%ifarch %{ix86} x86_64
-  -Dconfig_jlink_spi=false \
-  -Dconfig_internal=true
-%else
   -Dconfig_atahpt=false \
   -Dconfig_atapromise=false \
   -Dconfig_atavia=false \
   -Dconfig_drkaiser=false \
   -Dconfig_gfxnvidia=false \
   -Dconfig_it8212=false \
-  -Dconfig_jlink_spi=false \
   -Dconfig_nic3com=false \
   -Dconfig_nicintel_eeprom=false \
   -Dconfig_nicintel=false \
@@ -62,9 +57,7 @@ sed -e 's/MODE="[0-9]*", GROUP="plugdev"/TAG+="uaccess"/g' util/flashrom_udev.ru
   -Dconfig_ogp_spi=false \
   -Dconfig_rayer_spi=false \
   -Dconfig_satamv=false \
-  -Dconfig_satasii=false \
-  -Dconfig_internal=false
-%endif
+  -Dconfig_satasii=false
 
 %meson_build
 
