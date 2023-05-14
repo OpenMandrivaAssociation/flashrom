@@ -47,7 +47,8 @@ sed -e 's/MODE="[0-9]*", GROUP="plugdev"/TAG+="uaccess"/g' util/flashrom_udev.ru
 %install
 %meson_install
 
-install -D -p -m 0644 util/z60_flashrom.rules %{buildroot}/%{_udevrulesdir}/60_flashrom.rules
+install -D -p -m 0644 util/flashrom_udev.rules %{buildroot}/%{_udevrulesdir}/60_flashrom.rules            
+rm %{buildroot}/%{_libdir}/libflashrom.a
 
 %files
 %license COPYING
