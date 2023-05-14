@@ -38,7 +38,7 @@ Files for development with %{name}.
 %prep
 %autosetup -p1 -n %{name}-v%{version}
 # Replace GROUP="plugdev" specifiers with TAG+="uaccess"
-sed -e 's/MODE="[0-9]*", GROUP="plugdev"/TAG+="uaccess"/g' util/z60_flashrom.rules -i
+sed -e 's/MODE="[0-9]*", GROUP="plugdev"/TAG+="uaccess"/g' util/flashrom_udev.rules -i
 
 %build
 %meson \
