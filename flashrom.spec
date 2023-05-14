@@ -9,10 +9,7 @@ License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://flashrom.org
 Source0:	http://download.flashrom.org/releases/%{name}-v%{version}.tar.bz2
-# upstream already: https://review.coreboot.org/c/flashrom/+/38939
-Patch0:		0001-Install-the-man-file-when-using-meson-as-a-buildsyst.patch
-# upstreamed: https://review.coreboot.org/c/flashrom/+/48478
-Patch1:		0002-meson-Add-missing-config-option-for-J-Link-SPI.patch
+
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libusb)
 BuildRequires:	pkgconfig(libpci)
