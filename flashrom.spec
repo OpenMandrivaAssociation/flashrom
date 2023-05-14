@@ -3,8 +3,8 @@
 Summary:	Utility which can be used to detect/read/write BIOS chips
 Name:		flashrom
 Epoch:		1
-Version:	1.2
-Release:	2
+Version:	1.3.0
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://flashrom.org
