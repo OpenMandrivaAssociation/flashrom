@@ -1,10 +1,11 @@
 %define debug_package %{nil}
+%global build_ldflags %{build_ldflags} -Wl,--undefined-version
 
 Summary:	Utility which can be used to detect/read/write BIOS chips
 Name:		flashrom
 Epoch:		1
 Version:	1.3.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://flashrom.org
