@@ -19,6 +19,7 @@ BuildRequires:	meson
 #BuildRequires:	libjaylink-devel
 BuildRequires:	pkgconfig(libftdi1)
 BuildRequires:	systemd-rpm-macros
+BuildRequires:  python3dist(sphinx)
 %ifarch %{ix86} %{x86_64} %{armx}
 BuildRequires:	dmidecode
 Requires:	dmidecode
