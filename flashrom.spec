@@ -9,7 +9,7 @@ Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		https://flashrom.org
-Source0:	https://download.flashrom.org/releases/%{name}-v%{version}.tar.xz
+Source0:	https://download.flashrom.org/releases/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libusb)
@@ -37,7 +37,7 @@ Requires:	%{name} = %{EVRD}
 Files for development with %{name}.
 
 %prep
-%autosetup -p1 -n %{name}-v%{version}
+%autosetup -p1 -n %{name}-%{version}
 # Replace GROUP="plugdev" specifiers with TAG+="uaccess"
 sed -e 's/MODE="[0-9]*", GROUP="plugdev"/TAG+="uaccess"/g' util/flashrom_udev.rules -i
 
