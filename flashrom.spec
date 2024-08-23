@@ -4,12 +4,12 @@
 Summary:	Utility which can be used to detect/read/write BIOS chips
 Name:		flashrom
 Epoch:		1
-Version:	1.3.0
-Release:	2
+Version:	1.4.0
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://flashrom.org
-Source0:	http://download.flashrom.org/releases/%{name}-v%{version}.tar.bz2
+Url:		https://flashrom.org
+Source0:	https://download.flashrom.org/releases/%{name}-v%{version}.tar.xz
 
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libusb)
