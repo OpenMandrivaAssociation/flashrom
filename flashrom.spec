@@ -15,6 +15,8 @@ BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libusb)
 BuildRequires:	pkgconfig(libpci)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(libjaylink)
+BuildRequires:	pkgconfig(libcrypto)
 BuildRequires:	meson
 #BuildRequires:	libjaylink-devel
 BuildRequires:	pkgconfig(libftdi1)
