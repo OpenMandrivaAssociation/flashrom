@@ -4,12 +4,12 @@
 Summary:	Utility which can be used to detect/read/write BIOS chips
 Name:		flashrom
 Epoch:		1
-Version:	1.4.0
+Version:	1.6.0
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		https://flashrom.org
-Source0:	https://download.flashrom.org/releases/%{name}-%{version}.tar.xz
+Source0:	https://download.flashrom.org/releases/%{name}-v%{version}.tar.xz
 
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libusb)
@@ -38,12 +38,12 @@ Requires:	%{name} = %{EVRD}
 Files for development with %{name}.
 
 %prep
-%autosetup -p1 -n %{name}-%{version}
+%autosetup -p1 -n %{name}-v%{version}
 # Replace GROUP="plugdev" specifiers with TAG+="uaccess"
 sed -e 's/MODE="[0-9]*", GROUP="plugdev"/TAG+="uaccess"/g' util/flashrom_udev.rules -i
 
 %build
-%meson -Dtests=disabled
+%meson -Dtests=disabled -Dgenerate_authors_list=disabled
 %meson_build
 
 %install
@@ -54,11 +54,13 @@ rm %{buildroot}/%{_libdir}/libflashrom.a
 
 %files
 %license COPYING
-%doc README
+%doc README.rst
 %{_bindir}/%{name}
 %doc %{_mandir}/man8/%{name}.*
 %{_udevrulesdir}/60_flashrom.rules
 %{_libdir}/libflashrom.so.*
+%doc %{_datadir}/doc/%{name}/html
+%{_datadir}/bash-completion/completions/%{name}.bash
 
 %files devel
 %{_includedir}/*.h
