@@ -4,8 +4,8 @@
 Summary:	Utility which can be used to detect/read/write BIOS chips
 Name:		flashrom
 Epoch:		1
-Version:	1.6.0
-Release:	3
+Version:	1.7.0
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		https://flashrom.org
@@ -40,7 +40,7 @@ Requires:	%{name} = %{EVRD}
 Files for development with %{name}.
 
 %prep
-%autosetup -p1 -n %{name}-v%{version}
+%autosetup -p1 -n flashrom-v1.7.0
 # Replace GROUP="plugdev" specifiers with TAG+="uaccess"
 sed -e 's/MODE="[0-9]*", GROUP="plugdev"/TAG+="uaccess"/g' util/flashrom_udev.rules -i
 
